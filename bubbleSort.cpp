@@ -1,25 +1,18 @@
 #include <iostream>
 using namespace std;
 int main(){
+int arr[] = {22,14,12,18,9};
+int i, j;
 
-int arr[5] = {9,8,6,1,7};
-int i,j,temp,result;
-
-for(i=0; i<5; i++){
-	for(j=i+1; j<5; j++){
-	 if(arr[i]>arr[j]){
-		temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
+for(i=0; i<5-1; i++){
+	for(j=1; j<5-i; j++){
+		if(arr[j-1]>arr[j]){
+			swap(arr[j-1], arr[j]);
+		}
 	}
 }
-}
 
-for(i=0; i<5; i++){
-	cout<<arr[i]<<" ";
-}
-
-
-
-
+ for(j=0; j<5; j++){
+	cout<<arr[j]<<" ";
+ }
 }
